@@ -25,7 +25,7 @@ app.get("/api/", (request, response) => {
         searchBooksBy(searchBy, RegExp("^"+searchValue, "i")).then(
             (result) => {
                 console.log(result);
-                response.json(result);
+                response.status(200).json(result);
             }
         )
     }

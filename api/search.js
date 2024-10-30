@@ -10,7 +10,7 @@ async function GET(request, response) {
     if (["title", "author", "category"].includes(searchBy)) {
 
         result = await searchBooksBy(searchBy, RegExp("^"+searchValue, "i"));
-        // return response.status(200).send(result);
+        return response.status(200).send(result);
 
         // searchBooksBy(searchBy, RegExp("^"+searchValue, "i")).then(
         //     (result) => {
@@ -20,7 +20,7 @@ async function GET(request, response) {
 
 
     }
-    return response.status(200).body(result).send("here");
+    return response.status(200).send("here");
     // return response.status(200).send("HERE");
 }
 

@@ -13,6 +13,7 @@ function GET(request, response) {
             }
         )
     }
+    return response.status(200).send("HERE");
 }
 
 export default GET;

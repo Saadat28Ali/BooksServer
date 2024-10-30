@@ -19,12 +19,12 @@ app.get("/api/", (request, response) => {
     const searchBy = request.query.searchby;
     const searchValue = request.query.value;
 
-    console.log(searchBy, searchValue);
+    console.log(searchBy, searchValue);gi
 
     if (["title", "author", "category"].includes(searchBy)) {
         searchBooksBy(searchBy, RegExp("^"+searchValue, "i")).then(
             (result) => {
-                console.log(result);
+                // console.log(result);
                 response.status(200).send(result);
             }
         )

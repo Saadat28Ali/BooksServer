@@ -2,7 +2,7 @@
     "version": 2, 
     "headers": [
         {
-            "source": "/api/search.js", 
+            "source": "/api/(.*)", 
             "headers": [
                 {
                     "key": "Access-Control-Allow-Origin", 

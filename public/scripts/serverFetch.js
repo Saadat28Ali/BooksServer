@@ -37,8 +37,10 @@ async function searchBooksBy(fieldToMatch, requiredValue) {
 
         let query = {};
         query[fieldToMatch] = requiredValue;
+        let queryOptions = {};
+        queryOptions.sort = fieldToMatch;
 
-        const queryResult = await collection.find(query).limit(10).toArray();
+        const queryResult = await collection.find(query, queryOptions).limit(10).toArray();
 
         return queryResult;
     } finally {

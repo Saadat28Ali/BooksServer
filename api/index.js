@@ -4,7 +4,7 @@ import express from "express";
 // script imports
 import { searchBooksBy } from "../public/scripts/serverFetch.js";
 
-const port = 5000;
+
 const app = express();
 
 app.use((req, res, next) => {

@@ -1,6 +1,16 @@
 { 
     "version": 2, 
-
+    "headers": [
+        {
+            "source": "/api/search.js", 
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin", 
+                    "value": "*"
+                }
+            ]
+        }
+    ], 
     "functions": {
         "api/search.js": {
             "memory": 1024, 

@@ -13,8 +13,6 @@ function GET(request, response) {
             }
         )
     }
-    
-    // response.status(400).send("Error occurred");
 }
 
 export default GET;

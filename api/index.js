@@ -24,7 +24,6 @@ app.get("/api/", (request, response) => {
     if (["title", "author", "category"].includes(searchBy)) {
         searchBooksBy(searchBy, RegExp("^"+searchValue, "i")).then(
             (result) => {
-                // console.log(result);
                 response.status(200).send(result);
             }
         )

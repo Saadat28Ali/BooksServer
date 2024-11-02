@@ -28,7 +28,7 @@ async function testrun() {
     }
 }
 
-async function searchBooksBy(fieldToMatch, requiredValue) {
+async function searchBooksBy(fieldToMatch, requiredValue, pageNo, pageSize) {
     try {
         await client.connect();
 
@@ -40,7 +40,7 @@ async function searchBooksBy(fieldToMatch, requiredValue) {
         let queryOptions = {};
         queryOptions.sort = fieldToMatch;
 
-        const queryResult = await collection.find(query, queryOptions).limit(10).toArray();
+        const queryResult = await collection.find(query, queryOptions).skip(pageNo*pageSize).limit(pageSize).toArray();
 
         return queryResult;
     } finally {

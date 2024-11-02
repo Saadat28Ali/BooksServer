@@ -14,7 +14,7 @@ async function GET(request, response) {
         result = await searchBooksBy(searchBy, RegExp("^"+searchValue, "i"), pageNo, pageSize);
         return response.status(200).send(result);
     }
-    return response.status(200).send("Problematic search query");
+    // return response.status(200).send("Problematic search query");
 }
 
 export default GET;
